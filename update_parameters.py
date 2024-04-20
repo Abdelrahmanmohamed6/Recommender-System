@@ -13,6 +13,10 @@ engine=DB().DB_Engine()
 import warnings
 warnings.filterwarnings('ignore')
 
+#perpose of this function is read database tables for user and event 
+#then there is two types of recommenders
+#first one is content based --> its dependent on user preference categories and event categories
+#second one is collaborative filtering --> its dependent on user behaviour/interaction with events
 def read_files():
          interaction=pd.read_sql(
          """WITH combined_data AS ( 
